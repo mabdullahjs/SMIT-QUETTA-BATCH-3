@@ -111,7 +111,6 @@
 // //   { id: 50, name: "User 50", email: "user50@example.com" }
 // // ];
 
-
 // // console.log(users[1].name);
 
 // // const div = document.querySelector(".container");
@@ -122,7 +121,7 @@
 // //             <h1>Name: ${users[i].name}</h1>
 // //             <h4>Email: ${users[i].email}</h4>
 // //         </div>
-  
+
 // //   `
 // // }
 
@@ -148,8 +147,6 @@
 
 // // }
 
-
-
 // // const nestedObj = {
 // //     names: {
 // //         firstPosition: ['abdullah', 'usman', 'haseeb', 'abubakar'],
@@ -162,10 +159,6 @@
 // // }
 
 // // console.log(nestedObj.names.secondPosition[1].names[0].names[0]);
-
-
-
-
 
 // // let nestedData = [
 // //     {
@@ -210,13 +203,9 @@
 // //     }
 // // ];
 
-
 // // console.log(nestedData[0].subcategories[1].products[0].model);
 
-
 // // https://drive.google.com/file/d/1ePUVgnOhU-x9LZn-bekfqAA0Afe9jCVK/view?usp=sharing
-
-
 
 // const employees = [
 //   { name: "John", salary: 55000 },
@@ -231,7 +220,6 @@
 //   { name: "Sunil", salary: 60000 }
 // ];
 
-
 // const div = document.querySelector(".container");
 
 // for(let i = 0; i < employees.length; i++){
@@ -242,14 +230,12 @@
 //              <h1>Name: ${employees[i].name}</h1>
 //              <h4>Salary: ${employees[i].salary}</h4>
 //          </div>
-    
+
 //     `
 
 //   }
-  
+
 // }
-
-
 
 // const users = [
 //   { name: "Ali", email: "ali@gmail.com" },
@@ -269,12 +255,10 @@
 // // for(let i = 0; i < users.length; i++){
 // //   console.log(users[i]);
 // //   allemails.push(users[i].email)
-  
+
 // // }
 
 // // console.log(allemails);
-
-
 
 // const players = [
 //   { name: "Rohit", score: 50 },
@@ -289,17 +273,13 @@
 //   { name: "Bumrah", score: 40 }
 // ];
 
-
-
 // let totalScore = 0
 // for(let i = 0; i < players.length; i++){
 //   totalScore += players[i].score
 //   console.log(players[i]);
-  
+
 // }
 // console.log(totalScore / players.length);
-
-
 
 // const items = [
 //   { item: "Pen", quantity: 20, price: 10 },
@@ -319,12 +299,10 @@
 //   let eachQuan = items[i].quantity * items[i].price
 //   total += eachQuan
 //   // console.log(eachQuan);
-  
 
 // }
 
 // console.log(total);
-
 
 // const courses = [
 //   { title: "Math" },
@@ -347,9 +325,8 @@
 //     biggestLength = courses[i].title.length
 //     index = i
 //   }
-  
+
 // }
 
 // // console.log(biggestLength);
 // console.log(courses[index]);
-
