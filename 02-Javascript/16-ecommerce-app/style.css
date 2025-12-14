@@ -32,9 +32,13 @@ h1 {
     font-weight: bold;
 }
 
-.btns button.active,
+
 .btns button:hover {
     background: #007bff;
+    color: white;
+}
+.btns button.active {
+    background: #000000;
     color: white;
 }
 

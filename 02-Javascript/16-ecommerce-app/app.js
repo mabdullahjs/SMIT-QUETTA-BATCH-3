@@ -228,14 +228,18 @@ const btncontainer = document.querySelector(".btns");
 const container = document.querySelector("#products");
 
 let category = [];
-products.map((item) => {
+products.map((item , index) => {
   if (category.indexOf(item.category) === -1) {
     category.push(item.category);
-    btncontainer.innerHTML += `<button>${item.category}</button>`;
   }
 });
 
+category.map((item , index) => {
+  btncontainer.innerHTML += `<button onclick="filterProduct(${index})">${item}</button>`;
+})
+
 function renderProducts(arr) {
+  container.innerHTML = ""
   arr.map((item) => {
     container.innerHTML += `<div class="card">
             <h2>${item.name}</h2>
@@ -247,3 +251,25 @@ function renderProducts(arr) {
 
 
 renderProducts(products)
+
+
+function filterProduct(index){
+  const filteredProduct = products.filter(item => item.category === category[index])
+
+  renderProducts(filteredProduct)
+  
+  
+}
+
+btncontainer.addEventListener('click' , (event)=>{
+  btncontainer.childNodes.forEach(item => {
+    item.className = ""
+  })
+  console.log(event.target);
+  if(event.target.tagName === "BUTTON"){
+    event.target.className = "active"
+
+  }
+  
+  
+})
