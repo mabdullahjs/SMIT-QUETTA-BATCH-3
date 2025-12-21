@@ -103,10 +103,52 @@
 //     console.log("finally laazmi chalaiga.");
 //   });
 
+// function goForSedan(budget) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (budget > 4000000) {
+//         resolve("Go for sedan");
+//       } else {
+//         reject("Go for alto dabba");
+//       }
+//     }, 2000);
+//   });
+// }
+
+// goForSedan(50000)
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+//   .finally(() => {
+//     console.log("finally laazmi chalaiga.");
+//   });
+
+// async function executePromise() {
+//     try {
+//         const wait = await goForSedan(5000000)
+//         console.log(wait);
+//     } catch (error) {
+//         console.error(error)
+//     }
+    
+
+// }
+
+// try {
+//     lert("hello")
+// }catch(error){
+//     console.error(error)
+// }
+// console.log("console after alert");
+
+
+executePromise()
+
+
+// promises
 // async await
+// try catch
 // fetch
-
-
-
-
-// switch case
