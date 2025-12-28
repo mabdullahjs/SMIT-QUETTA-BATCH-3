@@ -1,15 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Loops</title>
+
+    <style>
+    .expense-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 10px;
+    }
+
+     .expense-card {
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 8px;
+        background: #f9f9f9;
+    }
+
+    .delete-btn {
+        margin-top: 8px;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 5px;
+        background: #e74c3c;
+        color: white;
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        background: #c0392b;
+    }
+</style>
+
 </head>
+
 <body>
-    <h1>Hello world</h1>
+    <!-- <h1>Hello world</h1>
     <button>clear timeout</button>
-    <button onclick=" clearConsole()">clear interval</button>
+    <button onclick=" clearConsole()">clear interval</button> -->
+
+    <h1>Expense Management System</h1>
+    <h2>Total Expense <span id="total-expense"></span></h2>
+
+    <input id="amount" placeholder="enter amount" type="number">
+    <select id="category">
+
+    </select>
+
+    <input type="text" placeholder="remarks" id="remarks">
+    <button id="expense-btn">add Expense</button>
+
+
+    <div class="expense-container">
+
+       
+
+    </div>
 
     <script src="./app.js"></script>
 </body>
+
 </html>
