@@ -1,0 +1,9 @@
+1- npm i use hota haa package.json ki file ma jitni dependencies ya packages hain unko download krna ka liya
+
+2- Node_modules ki file ka undar tamaam dependencies ka code hota ha or ya bhat heavy hota ha. Isko hum github pa nahi bhejta hain. Agar appka pass Node_modules ka folder nahi mujood to app simple npm i chalaye wo ajayega.
+
+3- package.json ki koi bhi script run krni ha to us sa pehla npm run lagado
+
+4- <></> React fragments
+
+5- Hook aik fancy word ha simple function ka. Hook ki phehchan use ka keyword sa hoti ha.
