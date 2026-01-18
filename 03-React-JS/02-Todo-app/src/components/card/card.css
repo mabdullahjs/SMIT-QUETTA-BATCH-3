@@ -1,6 +1,5 @@
-@import "tailwindcss";
-.children{ 
-    margin: 10px 10px 10px 0px;
+.card {
+    margin: 10px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
