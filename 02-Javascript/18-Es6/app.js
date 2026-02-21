@@ -260,3 +260,24 @@ function greetUser(){
 
 export {username , age}
 export default greetUser
+
+
+
+// hackathon (mid hackathon (half month))
+
+
+// react + firebase (1 month)
+// typescript (2 class) 
+// next js typescript
+// backend (nodejs express js) (1.5 month)
+// react native (mobile app) (.5 month)
+// AI for developers (further roadmap)
+
+
+// ikhtetaam
+
+// final hackathon (mobile app, web app, backend)
+
+
+
+// ATS resume
