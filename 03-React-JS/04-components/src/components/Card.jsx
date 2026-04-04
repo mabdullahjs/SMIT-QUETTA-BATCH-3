@@ -1,18 +1,18 @@
 import React from 'react'
 
-const Card = (props) => {
+const Card = ({image , title , description}) => {
     return (
         <div className="max-w-sm rounded-xl overflow-hidden shadow-md bg-white">
             <img
                 className="w-full h-48 object-cover"
-                src={props.image}
+                src={image}
                 alt="Placeholder Image"
             />
             <div className="p-4">
                 <h2 className="text-lg font-semibold text-gray-800">
-                  {props.title}
+                  {title}
                 </h2>
-                <p>{props.description}</p>
+                <p>{description}</p>
             </div>
         </div>
     )
