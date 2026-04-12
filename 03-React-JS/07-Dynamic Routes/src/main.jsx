@@ -9,6 +9,7 @@ import About from './pages/About.jsx'
 import Product from './pages/Product.jsx'
 import Navbar from './components/Navbar.jsx'
 import SingleProduct from './pages/SingleProduct.jsx'
+import Todo from './pages/Todo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/users/:id' element={<UserDetail />} />
       <Route path='/product' element={<Product />} />
       <Route path='/product/:id' element={<SingleProduct />} />
+      <Route path='/todo' element={<Todo />} />
     </Routes>
   </BrowserRouter>
 
