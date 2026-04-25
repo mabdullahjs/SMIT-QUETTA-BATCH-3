@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, deleteTodo, editTodo } from './config/redux-toolkit/reducers/todoSlice';
 
-const App = () => {
+const Home = () => {
   const [input , setInput] = useState('');
 
   // get data from redux
@@ -54,7 +54,7 @@ const App = () => {
   )
 }
 
-export default App
+export default Home
 
 
 // crud (Todo app)
