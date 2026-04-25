@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, deleteTodo, editTodo } from './config/redux-toolkit/reducers/todoSlice';
+import { addTodo, deleteTodo, editTodo } from '../config/redux-toolkit/reducers/todoSlice';
 
 const Home = () => {
   const [input , setInput] = useState('');

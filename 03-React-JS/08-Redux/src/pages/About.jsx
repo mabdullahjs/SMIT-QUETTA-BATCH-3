@@ -5,7 +5,9 @@ const About = () => {
     return (
         <>
             <Box>
-                <Typography variant='h1'>Hello world</Typography>
+                <Typography sx={{
+                textAlign: 'center'
+            }} variant='h1'>Hello world</Typography>
             </Box>
         </>
     )
