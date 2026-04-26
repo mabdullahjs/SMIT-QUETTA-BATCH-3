@@ -6,6 +6,7 @@ import About from './pages/About.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import Navbar from './components/Navbar.jsx'
+import Todo from './pages/Todo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
     <Route path='about' element={<About/>}/>
     <Route path='login' element={<Login/>}/>
     <Route path='register' element={<Register/>}/>
+    <Route path='todo' element={<Todo/>}/>
   </Routes>
   </BrowserRouter>
 )
