@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Login from './Login'
+import { useEffect, useState } from 'react'
 import { supabase } from '../config/supabase/supabase'
 
 function Todo() {
@@ -23,6 +22,7 @@ function Todo() {
             console.log(data);
 
         }
+
 
     }
 
