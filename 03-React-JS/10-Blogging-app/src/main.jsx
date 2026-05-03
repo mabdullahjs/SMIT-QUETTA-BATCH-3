@@ -22,3 +22,6 @@ createRoot(document.getElementById('root')).render(
   </Routes>
   </BrowserRouter>
 )
+
+
+// https://www.figma.com/design/57xYjZYhVpCQAALtxPH3kO/SMIT-Mini-Hackathon-Task---personal-blogging-app?node-id=4291-2280
