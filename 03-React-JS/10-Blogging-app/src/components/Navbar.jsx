@@ -1,53 +1,96 @@
-import { Link, NavLink } from "react-router";
-import { useState } from "react";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+/* Redux */
+import { useSelector, useDispatch } from "react-redux";
+import { logoutUser } from "../redux/userSlice";
+import { supabase } from "../config/supabase/supabase";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const navLinkClass = ({ isActive }) =>
-    isActive
-      ? "text-blue-500 font-semibold"
-      : "text-gray-700 hover:text-blue-500";
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const { user } = useSelector(state => state.user)
+  console.log(user);
+
+
+  const handleLogout =async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+
+      if (error) {
+        alert(error.message);
+        return;
+      }
+      dispatch(logoutUser())
+      navigate('/login')
+
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong');
+    } finally {
+      setLoading(false);
+    }
+
+
+  }
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          
-          {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-blue-600">
-           Blogging App
-          </Link>
+    <nav className="bg-gradient-to-r from-blue-700 to-cyan-500 shadow-lg">
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <NavLink to="/" className={navLinkClass}>Home</NavLink>
-            <NavLink to="/login" className={navLinkClass}>Login</NavLink>
-            <NavLink to="/register" className={navLinkClass}>Register</NavLink>
-            <NavLink to="/dashboard" className={navLinkClass}>Dashboard</NavLink>
-            <NavLink to="/profile" className={navLinkClass}>Profile</NavLink>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
 
-          {/* Mobile Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 focus:outline-none"
-          >
-            ☰
-          </button>
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-white text-xl sm:text-2xl font-bold tracking-wide text-center sm:text-left"
+        >
+          Personal Blogging App
+        </Link>
+
+        {/* Right Side */}
+        <div className="flex items-center flex-wrap justify-center gap-3 sm:gap-4">
+
+          {user && <div>
+            <Link
+              to="/profile"
+              className="text-white font-semibold text-sm sm:text-base hover:text-slate-200 transition-all duration-300"
+            >
+              {user.first_name}
+            </Link>
+
+            {/* Logout */}
+            <button
+              className="bg-white text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-slate-100 transition-all duration-300 text-sm sm:text-base"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </div>}
+
+
+          {!user && <>
+            <Link
+              to="/login"
+              className="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition-all duration-300 text-sm sm:text-base"
+            >
+              Login
+            </Link>
+
+            {/* Signup */}
+            <Link
+              to="/register"
+              className="bg-white text-blue-700 px-4 py-2 rounded-lg font-medium hover:bg-slate-100 transition-all duration-300 text-sm sm:text-base"
+            >
+              Signup
+            </Link>
+          </>}
+
         </div>
+
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          <NavLink to="/" className={navLinkClass} onClick={() => setIsOpen(false)}>Home</NavLink>
-          <NavLink to="/login" className={navLinkClass} onClick={() => setIsOpen(false)}>Login</NavLink>
-          <NavLink to="/register" className={navLinkClass} onClick={() => setIsOpen(false)}>Register</NavLink>
-          <NavLink to="/dashboard" className={navLinkClass} onClick={() => setIsOpen(false)}>Dashboard</NavLink>
-          <NavLink to="/profile" className={navLinkClass} onClick={() => setIsOpen(false)}>Profile</NavLink>
-        </div>
-      )}
     </nav>
   );
 };
