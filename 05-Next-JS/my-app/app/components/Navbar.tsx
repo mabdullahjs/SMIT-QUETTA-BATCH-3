@@ -34,8 +34,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/services/webdev" className="hover:text-yellow-400 transition">
-              web dev
+            <Link href="/users" className="hover:text-yellow-400 transition">
+              User
             </Link>
           </li>
         </ul>
