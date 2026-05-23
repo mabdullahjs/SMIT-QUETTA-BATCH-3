@@ -158,11 +158,11 @@
 //-----Generics-----//
 
 
-function greetUser<T>(username:T):T{
-    return 20
-}
+// function greetUser<T>(username:T):T{
+//     return 20
+// }
 
-console.log(greetUser("Ashdiola"));
+// console.log(greetUser("Ashdiola"));
 
 
 
