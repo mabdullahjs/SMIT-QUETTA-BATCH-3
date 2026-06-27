@@ -1,13 +1,24 @@
 import express from "express";
-import cors from 'cors'
+import cors from "cors";
+import mongoose from "mongoose";
+
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors())
+app.use(cors());
 app.use(express.json());
 
 const allTodos = [];
+
+
+// mongoose.connect("mongodb://abdullahawan00119_db_user:Abdullah123@ac-lbvfkbx-shard-00-00.by7ry0v.mongodb.net:27017,ac-lbvfkbx-shard-00-01.by7ry0v.mongodb.net:27017,ac-lbvfkbx-shard-00-02.by7ry0v.mongodb.net:27017/?ssl=true&replicaSet=atlas-3uaiko-shard-0&authSource=admin&appName=Cluster0")
+  // .then(() => {
+  //   console.log("MongoDB connected");
+  // })
+  // .catch((err) => {
+  //   console.error("Connection error:", err);
+  // });
 
 // const checkMiddleware = (req, res, next) => {
 //   console.log("check middleware");
@@ -94,9 +105,7 @@ app.put("/todo/:id", (req, res) => {
   res.status(200).json({
     message: "todo edited successfully",
     todos: allTodos,
-  })
-
-  
+  });
 });
 
 app.listen(port, () => {
